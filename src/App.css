@@ -1,0 +1,81 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background — soft gradient with a slight movement feel */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2a1a4a, #0f172a);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  color: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header Section */
+.head-part {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(90deg, rgba(88, 86, 214, 0.2), rgba(52, 172, 224, 0.15));
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.head-part:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(88, 86, 214, 0.3);
+}
+
+/* Title */
+.name h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #7f7fff, #00c6ff, #6a00f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.4rem;
+}
+
+/* Subtitle */
+.name .subtitle {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* Animation for background gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .name h1 {
+    font-size: 2.2rem;
+  }
+
+  .name .subtitle {
+    font-size: 1rem;
+  }
+}

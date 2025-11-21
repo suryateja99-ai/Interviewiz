@@ -1,0 +1,202 @@
+.codeexp {
+  background: radial-gradient(circle at top left, #0b0b1a, #050510);
+  color: #f2f2f2;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  color: #00c2ff;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 10px #00c2ff;
+}
+
+.subtitle {
+  color: #a0a0a0;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.chat-section {
+  width: 70%;
+  max-width: 800px;
+  background: rgba(20, 20, 40, 0.6);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 194, 255, 0.2);
+  overflow-y: auto;
+  min-height: 300px;
+  margin-bottom: 1rem;
+}
+
+.msg {
+  margin: 0.6rem 0;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+.msg.user {
+  text-align: right;
+  color: #00e0ff;
+}
+
+.msg.assistant {
+  text-align: left;
+  color: #fff;
+}
+
+.loading {
+  text-align: center;
+  color: #00c2ff;
+  font-style: italic;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.input-area {
+  display: flex;
+  gap: 0.8rem;
+  width: 70%;
+  max-width: 800px;
+}
+
+.input-box {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #101020;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.submit {
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00d4ff;
+}
+
+.codeexp {
+  width: 80%;
+  margin: 2rem auto;
+  background: #121826;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: #00eaff;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.chat-section {
+  background: #1a2333;
+  padding: 1rem;
+  border-radius: 15px;
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.user-msg, .ai-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.user-msg {
+  background: #00324b;
+  align-self: flex-end;
+}
+
+.ai-msg {
+  background: #1e2a3b;
+  border-left: 4px solid #00eaff;
+}
+
+.markdown code {
+  background: #111927;
+  color: #00ff9f;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
+.markdown pre {
+  background: #0f172a;
+  color: #00ff9f;
+  padding: 10px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-box {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #1a2333;
+  color: #fff;
+}
+
+.submit {
+  background: linear-gradient(45deg, #007bff, #00eaff);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.loading {
+  color: #00eaff;
+  text-align: center;
+}
