@@ -8,6 +8,7 @@ function CodeExplain() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   const handleMsg = async () => {
     if (!input.trim()) return;
@@ -18,7 +19,7 @@ function CodeExplain() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/code-explainer", {
+      const res = await axios.post("${API}/api/code-explainer", {
         message: input,
       });
 
