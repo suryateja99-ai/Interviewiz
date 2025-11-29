@@ -12,6 +12,7 @@ function Interview() {
   const [code, setCode] = useState("// Write your code here...");
   const recognitionRef = useRef(null);
   const utteranceRef = useRef(null);
+  const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   const [userSpeaking, setUserSpeaking] = useState(false);
 
@@ -73,7 +74,7 @@ function Interview() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/interview", {
+      const res = await fetch("${API}/api/interview", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: newMessages }),
