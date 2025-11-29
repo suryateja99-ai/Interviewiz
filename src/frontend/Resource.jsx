@@ -6,6 +6,7 @@ function Resources() {
   const [query, setQuery] = useState("");
   const [aiResponse, setAiResponse] = useState(null);
   const [loading, setLoading] = useState(false);
+  const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +16,7 @@ function Resources() {
     setAiResponse(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/resources", {
+      const response = await fetch("${API}/api/resources", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: query }),
