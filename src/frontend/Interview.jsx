@@ -74,7 +74,7 @@ function Interview() {
     setLoading(true);
 
     try {
-      const res = await fetch("${API}/api/interview", {
+      const res = await fetch(`${API}/api/interview`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: newMessages }),
