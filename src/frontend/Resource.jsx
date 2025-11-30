@@ -16,7 +16,7 @@ function Resources() {
     setAiResponse(null);
 
     try {
-      const response = await fetch("${API}/api/resources", {
+      const response = await fetch(`${API}/api/resources`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: query }),
