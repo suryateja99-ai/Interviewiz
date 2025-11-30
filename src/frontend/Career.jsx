@@ -17,7 +17,7 @@ function Career() {
     setLoading(true);
 
     try {
-      const res = await axios.post("${API}/api/career-chat", {
+      const res = await axios.post(`${API}/api/career-chat`, {
         message: input,
       });
 
