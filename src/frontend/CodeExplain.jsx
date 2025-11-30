@@ -19,7 +19,7 @@ function CodeExplain() {
     setLoading(true);
 
     try {
-      const res = await axios.post("${API}/api/code-explainer", {
+      const res = await axios.post(`${API}/api/code-explainer`, {
         message: input,
       });
 
